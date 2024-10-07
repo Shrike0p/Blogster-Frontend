@@ -1,7 +1,9 @@
 
 # Blogster - Frontend   
 ## Live Link :- 
-```bash https://blogster-v1.vercel.app/signup```
+```bash 
+https://blogster-v1.vercel.app/signup
+```
 
 ## Overview
 
