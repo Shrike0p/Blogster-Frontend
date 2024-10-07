@@ -4,9 +4,10 @@ import { BLogSklton } from "../Components/BlogsSkelton";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { BACKEND_URL } from "../config";
+import { Blog } from "../hooks"; // Make sure Blog type is imported
 
-// Date formatting function (Optional: You can use date-fns if you prefer)
-const formatDate = (dateString) => {
+// Date formatting function
+const formatDate = (dateString: string) => {
     const date = new Date(dateString);
     return date.toLocaleDateString('en-US', {
         year: 'numeric',
@@ -21,7 +22,7 @@ export const Blogs = () => {
     const [page, setPage] = useState(1);
     const [totalPages, setTotalPages] = useState(1);
     const [loading, setLoading] = useState(true);
-    const [blogs, setBlogs] = useState([]);
+    const [blogs, setBlogs] = useState<Blog[]>([]);
     const [debouncedQuery, setDebouncedQuery] = useState(searchQuery);
 
     const fetchBlogs = async () => {

@@ -5,14 +5,15 @@ import { BACKEND_URL } from "../config";
 // Define the structure for a Blog
 export interface Blog {
     id: string;
-    content: string;
     title: string;
+    content: string;
     author: {
         name: string;
     };
+    createdAt: string; // Ensure createdAt is included and is a string (ISO format)
     likesCount: number;
     commentsCount: number;
-    comments?: { text: string }[]; // Comments array for individual blog
+    comments?: { text: string }[]; // Optional comments array for the blog
 }
 
 // Hook to fetch a single blog by its ID

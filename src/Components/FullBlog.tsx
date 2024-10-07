@@ -49,7 +49,7 @@ export const FullBlog = ({ blog }: { blog: Blog | null }) => {
         if (!blog) return;
         try {
             await axios.post(`${BACKEND_URL}/api/v1/blog/${blog.id}/comment`, {
-                comment_text: newComment
+                comment_text: newComment,
             }, {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -79,7 +79,9 @@ export const FullBlog = ({ blog }: { blog: Blog | null }) => {
                         <div className="pt-4 mb-6 text-lg leading-7 text-gray-800">{blog.content}</div>
 
                         <div className="pt-4 mb-6">
-                            <button onClick={handleLike} className="mr-4 text-sm text-blue-500 hover:underline">Like ({likes})</button>
+                            <button onClick={handleLike} className="mr-4 text-sm text-blue-500 hover:underline">
+                                Like ({likes})
+                            </button>
                         </div>
 
                         <div className="pt-4 mb-6">
@@ -99,7 +101,9 @@ export const FullBlog = ({ blog }: { blog: Blog | null }) => {
                                     className="border rounded px-2 py-1 w-full mb-2"
                                     placeholder="Add a comment..."
                                 />
-                                <button onClick={handleCommentSubmit} className="text-sm text-white bg-blue-500 px-4 py-2 rounded">Submit</button>
+                                <button onClick={handleCommentSubmit} className="text-sm text-white bg-blue-500 px-4 py-2 rounded">
+                                    Submit
+                                </button>
                             </div>
                         </div>
                     </div>

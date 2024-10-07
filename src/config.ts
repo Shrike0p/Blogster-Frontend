@@ -1,0 +1,1 @@
+export const BACKEND_URL="https://blogster-backend.onrender.com"
