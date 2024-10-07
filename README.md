@@ -28,7 +28,7 @@ This is the frontend for **Blogster**, a blogging platform where users can sign 
 
 1.  Clone the repository:
     ```bash
-    git clone <repository-url>
+    git clone https://github.com/Shrike0p/Blogster-Frontend
     ``` 
     
 3.  Navigate to the project directory:
